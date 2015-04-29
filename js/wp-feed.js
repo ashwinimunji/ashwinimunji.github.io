@@ -1,3 +1,5 @@
+/* global current_url */
+/* global globalData */
 window.current_url = "http://ashwinimunji.com/blog/the-laptop/?json=1";
 $.getJSON(current_url, function(data) {
 	window.globalData = data;
