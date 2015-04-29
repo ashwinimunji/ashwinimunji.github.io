@@ -1,3 +1,4 @@
+/// <reference path="../typings/jquery/jquery.d.ts"/>
 /* global current_url */
 /* global globalData */
 window.current_url = "http://ashwinimunji.com/blog/the-laptop/?json=1";
