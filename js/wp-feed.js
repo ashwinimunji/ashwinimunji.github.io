@@ -6,12 +6,10 @@ $.getJSON(current_url, function(data) {
 });
 function nextArticle(){
 	current_url=globalData.next_url+'?json=1';
-	console.log(current_url);
 	fillArticle(current_url,0);
 }
 function prevArticle(){
 	current_url=globalData.previous_url+'?json=1';
-	console.log(current_url);
 	fillArticle(current_url,1);
 }
 function fillArticle(current_url,p)
