@@ -17,8 +17,8 @@ function fillArticle(current_url,p)
 	$.getJSON(current_url, function(data){
 		window.globalData=data;
 		document.getElementById("wp-feed").innerHTML = "";
-		document.getElementById("wp-feed").innerHTML=document.getElementById("wp-feed").innerHTML + '<h4><a href="'+data.post.url+'">'+data.post.title+'</a></h4>';
-		document.getElementById("wp-feed").innerHTML=document.getElementById("wp-feed").innerHTML + '<p><a href="'+data.post.url+'"<span class="image right"><img src="'+data.post.thumbnail_images.medium.url+'"</span></a>'+data.post.excerpt+'<a href="'+data.post.url+'"> Read More &#8594;</p>';
+		document.getElementById("wp-feed").innerHTML = document.getElementById("wp-feed").innerHTML + '<h4><a href="'+data.post.url+'">'+data.post.title+'</a></h4>';
+		document.getElementById("wp-feed").innerHTML = document.getElementById("wp-feed").innerHTML + '<p><a href="'+data.post.url+'"<span class="image right"><img src="'+data.post.thumbnail_images.medium.url+'"</span></a>'+data.post.excerpt+'<a href="'+data.post.url+'"> Read More &#8594;</p>';
 	});
 	p = 1 ? current_url=globalData.previous_url+'?json=1' : current_url=globalData.next_url+'?json=1';
 }
