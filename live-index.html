@@ -1,9 +1,11 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Ashwini Munji</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/wp-feed.js"></script>
+		<script type="text/javascript" src="js/instafeed.js"></script>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -12,6 +14,7 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script type="text/javascript"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -36,42 +39,36 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
+						<h2>Instagram</h2>
+						<div class="row" id="instafeed">
+							<!--<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
 								<h3>Twitter logo</h3>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ramp Ready</h3>
-							</article>
+							</article>-->
+
 						</div>
 					</section>
 					<section>
-						<h3>Latest Writing</h3>
+						<h3><a href="http://ashwinimunji.com/blog/">Blog</a></h3>
 						<div id="wp-feed">
-							
+
 						</div>
 						<div align="center">
-							<button class="button special small" onclick="prevArticle()"><span class="icon fa-chevron-left"></span></button> 
+							<button class="button special small" onclick="prevArticle()"><span class="icon fa-chevron-left"></span></button>
 							<button class="button special small" onclick="nextArticle()"><span class="icon fa-chevron-right"></span></button>
 						</div>
+						<br>
 					</section>
-					<section>
-						<h3>Twitter</h3>
-						<div align="center">
-							<a class="twitter-timeline" href="https://twitter.com/AshwiniMunji" data-widget-id="592425463382839296">Tweets by @AshwiniMunji</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-						</div>
-					</section>
+
 					<footer id="footer">
 				<ul class="icons">
-					
+
+					<li><a href="http://instagram.com/ashwinimunji" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 					<li><a href="http://twitter.com/AshwiniMunji" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-behance"><span class="label">Behance</span></a></li>
+					<li><a href="https://dribbble.com/niMu-1692" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 					<li><a href="https://in.linkedin.com/pub/ashwini-munji/70/824/13a" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 					<li><a href="mailto:munjiashwini@gmail.com?Subject=I%20saw%20your%20website" target="_top" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					
+
 				</ul>
 				<ul class="copyright">
 					<li>&copy; Ashwini Munji</li>
@@ -88,5 +85,21 @@
   ga('create', 'UA-62287387-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+<script type="text/javascript">
+	var userFeed = new Instafeed({
+    get: 'user',
+    userId: 2085244550,
+    accessToken: '2085244550.467ede5.bce04b961a5f41679ef7814963293620',
+    useHttp: true,
+    links: true,
+    mock: false,
+    limit:6,
+    sortBy:'most-recent',
+     resolution:'low_resolution',
+		//resolution:'thumbnail',
+    template: '<a href="{{link}}" target="_blank"><img src="{{image}}"title="{{caption}}"/><div class="likes"><span id="heart">&#x1f497;</span>&nbsp;{{likes}}</div></a>'
+    });
+    userFeed.run();
 </script>
 </html>
